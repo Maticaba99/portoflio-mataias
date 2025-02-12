@@ -6,8 +6,12 @@ export function Footer() {
           © 2025 Matias Caballero. All rights reserved.
         </div>
         <div className="flex space-x-6">
-          <a href="#" className="text-muted-foreground hover:text-primary">Privacy Policy</a>
-          <a href="#" className="text-muted-foreground hover:text-primary">Terms of Service</a>
+          <a href="#" className="text-muted-foreground hover:text-primary">
+            Descargar CV
+          </a>
+          <a href="#" className="text-muted-foreground hover:text-primary">
+            LinkedIn
+          </a>
         </div>
       </div>
     </footer>

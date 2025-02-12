@@ -1,25 +1,34 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import { ChevronDown } from 'lucide-react';
+import { useState } from "react";
+import { ChevronDown } from "lucide-react";
 
 const faqs = [
   {
-    question: "¿Qué servicios ofreces como desarrollador?",
-    answer: "Ofrezco desarrollo web full-stack, incluyendo aplicaciones web modernas, APIs RESTful, bases de datos, y optimización de rendimiento. Me especializo en React, Next.js, Node.js y TypeScript."
+    question: "¿Cómo manejas la coordinación con equipos?",
+    answer:
+      "En Konabos, lideré a 5 desarrolladores juniors: asignaba tareas según habilidades, realizaba revisiones de código diarias y mantenía comunicación constante con clientes para garantizar alineación.",
   },
   {
-    question: "¿Cómo es tu proceso de trabajo?",
-    answer: "Mi proceso comienza con una consulta detallada para entender tus necesidades. Luego, desarrollo un plan de proyecto, establezco hitos claros y mantengo una comunicación constante durante todo el desarrollo."
+    question: "¿Qué metodologías usas para gestionar proyectos?",
+    answer:
+      "Adapto Scrum o Kanban según el proyecto. Priorizo estimaciones realistas y reviso el avance semanal para ajustar prioridades.",
   },
   {
-    question: "¿Cuál es tu tiempo de respuesta típico?",
-    answer: "Normalmente respondo a consultas dentro de 24 horas. Para proyectos activos, mantengo una comunicación diaria y abordo problemas urgentes lo antes posible."
+    question: "¿Tienes experiencia trabajando de forma remota?",
+    answer:
+      "Sí, he colaborado con equipos en Canadá, Estados Unidos, España y Latinoamérica. Me adapto a husos horarios y herramientas como Jira o Slack",
   },
   {
-    question: "¿Ofreces mantenimiento post-proyecto?",
-    answer: "Sí, ofrezco servicios de mantenimiento y soporte después del lanzamiento. Esto incluye actualizaciones de seguridad, corrección de errores y mejoras continuas según las necesidades."
-  }
+    question: "¿Cómo mantienes tus habilidades actualizadas?",
+    answer:
+      "Soy autodidacta: aprendo mediante documentación oficial, proyectos prácticos y comunidades técnicas. Actualmente, exploro IA aplicada a DevOps.",
+  },
+  {
+    question: "¿Buscas un rol 100% técnico o híbrido?",
+    answer:
+      "Prefiero roles que combinen desarrollo con liderazgo, como Tech Lead o Full-Stack Senior, donde pueda guiar equipos y tomar decisiones arquitectónicas.",
+  },
 ];
 
 export function FAQ() {
@@ -35,7 +44,7 @@ export function FAQ() {
         <div className="text-center space-y-4">
           <h2 className="text-4xl font-bold reveal">Preguntas Frecuentes</h2>
           <p className="text-muted-foreground reveal delay-1">
-            Encuentra respuestas a las preguntas más comunes sobre mis servicios y proceso de trabajo.
+            Lo que suelen preguntarme reclutadores y empresas:
           </p>
         </div>
         <div className="space-y-4">
@@ -50,14 +59,16 @@ export function FAQ() {
                 onClick={() => toggleFAQ(index)}
               >
                 <span className="font-semibold">{faq.question}</span>
-                <ChevronDown 
-                  className={`faq-icon w-5 h-5 flex-shrink-0 ${openIndex === index ? 'open' : ''}`}
+                <ChevronDown
+                  className={`faq-icon w-5 h-5 flex-shrink-0 ${
+                    openIndex === index ? "open" : ""
+                  }`}
                 />
               </button>
-              <div className={`faq-content ${openIndex === index ? 'open' : ''}`}>
-                <div className="px-8 my-2 pb-2 pb-6">
-                  {faq.answer}
-                </div>
+              <div
+                className={`faq-content ${openIndex === index ? "open" : ""}`}
+              >
+                <div className="px-8 my-2 pb-2 pb-6">{faq.answer}</div>
               </div>
             </div>
           ))}
