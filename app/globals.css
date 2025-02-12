@@ -1,0 +1,291 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 260 25% 98%;
+    --foreground: 260 25% 10%;
+    --card: 260 25% 100%;
+    --card-foreground: 260 25% 10%;
+    --popover: 260 25% 100%;
+    --popover-foreground: 260 25% 10%;
+    --primary: 260 60% 45%;
+    --primary-foreground: 260 25% 98%;
+    --secondary: 260 25% 90%;
+    --secondary-foreground: 260 25% 10%;
+    --muted: 260 25% 95%;
+    --muted-foreground: 260 25% 45%;
+    --accent: 260 25% 90%;
+    --accent-foreground: 260 25% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 260 25% 90%;
+    --input: 260 25% 90%;
+    --ring: 260 60% 45%;
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 260 25% 8%;
+    --foreground: 260 25% 98%;
+    --card: 260 25% 12%;
+    --card-foreground: 260 25% 98%;
+    --popover: 260 25% 12%;
+    --popover-foreground: 260 25% 98%;
+    --primary: 260 60% 55%;
+    --primary-foreground: 260 25% 98%;
+    --secondary: 260 25% 15%;
+    --secondary-foreground: 260 25% 98%;
+    --muted: 260 25% 15%;
+    --muted-foreground: 260 25% 65%;
+    --accent: 260 25% 15%;
+    --accent-foreground: 260 25% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 260 25% 98%;
+    --border: 260 25% 15%;
+    --input: 260 25% 15%;
+    --ring: 260 60% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Floating Animation */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Glassmorphism */
+.glass {
+  @apply backdrop-blur-lg bg-background/80 border border-white/10;
+}
+
+.glass-card {
+  @apply backdrop-blur-md bg-white/5 border border-white/10 shadow-xl;
+}
+
+.glass-hover {
+  @apply transition-all duration-300 hover:bg-white/10;
+}
+
+/* Custom Animations */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 20s linear infinite;
+}
+
+/* Sword Attack Animation */
+@keyframes sword-attack {
+  0% {
+    transform: rotate(0deg);
+  }
+  15% {
+    transform: rotate(-20deg) scale(1.1);
+  }
+  30% {
+    transform: rotate(160deg) scale(1.2);
+  }
+  45% {
+    transform: rotate(180deg) scale(1.1);
+  }
+  60% {
+    transform: rotate(180deg) scale(1);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.sword-icon {
+  animation: sword-attack 4s ease-in-out infinite;
+  transform-origin: center;
+}
+
+/* Hero Charging Animations */
+@keyframes pulse-charge {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.3;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(0.95);
+    opacity: 0.3;
+  }
+}
+
+@keyframes energy-ripple {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1);
+    opacity: 0.3;
+  }
+  100% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+}
+
+@keyframes glow-pulse {
+  0%, 100% {
+    opacity: 0.4;
+    filter: blur(40px);
+  }
+  20% {
+    opacity: 0.45;
+    filter: blur(42px);
+  }
+  40% {
+    opacity: 0.5;
+    filter: blur(44px);
+  }
+  60% {
+    opacity: 0.45;
+    filter: blur(42px);
+  }
+  80% {
+    opacity: 0.4;
+    filter: blur(40px);
+  }
+}
+
+.charging-core {
+  animation: pulse-charge 6s ease-in-out infinite;
+}
+
+.energy-ring {
+  animation: energy-ripple 6s ease-in-out infinite;
+}
+
+.glow-effect {
+  animation: glow-pulse 8s ease-in-out infinite;
+}
+
+/* Scroll Reveal Animations */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal {
+  opacity: 0;
+  animation: fade-up 0.6s ease-out forwards;
+}
+
+.delay-1 {
+  animation-delay: 0.1s;
+}
+
+.delay-2 {
+  animation-delay: 0.2s;
+}
+
+.delay-3 {
+  animation-delay: 0.3s;
+}
+
+/* Skill Bar Animation */
+@keyframes skill-fill {
+  from {
+    width: 0;
+  }
+}
+
+.skill-progress {
+  animation: skill-fill 1.5s ease-out forwards;
+}
+
+/* Card Hover Effects */
+.hover-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Button Hover Animation */
+.button-glow {
+  position: relative;
+  overflow: hidden;
+}
+
+.button-glow::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  transform: rotate(45deg);
+  transition: all 0.3s ease-out;
+}
+
+.button-glow:hover::after {
+  transform: rotate(45deg) translate(50%, 50%);
+}
+
+/* FAQ Animation */
+.faq-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+.faq-content.open {
+  max-height: 500px;
+}
+
+.faq-icon {
+  transition: transform 0.3s ease;
+}
+
+.faq-icon.open {
+  transform: rotate(180deg);
+}
