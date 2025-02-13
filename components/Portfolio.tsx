@@ -56,7 +56,7 @@ const projects = [
   {
     title: "Estrategia de Crecimiento para E-Commerce (UpGrow)",
     description:
-      "Impulsé una cuenta de repuestos de autos en Uruguay desde 0 hasta 100k visitas/mes, y ayudé a un consultor financiero español a generar 11k€ en 31 días mediante embudos de ventas y Meta Ads.",
+      "Impulsé una cuenta de repuestos de autos en Uruguay desde 0 hasta 100k visitas/mes, y ayudé a un consultor financiero español a generar 11k€ en 31 días mediante embudos de ventas",
     image: "upgrow service.png",
     tech: ["Marketing Digital", "Embudos de venta", "Meta Ads", "Consultoría"],
     features: [

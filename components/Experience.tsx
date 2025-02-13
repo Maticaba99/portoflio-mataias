@@ -6,28 +6,40 @@ import { Card } from "@/components/ui/card";
 
 const experiences = [
   {
+    image: "/mataias dev.png",
+    company: "Mataias Dev",
+    period: "Sept 2019 - Mar 2021",
+    role: "Freelance Full-Stack Developer",
+    description:
+      "Trabaje de forma remota y freelance con clientes de diferentes partes del mundo en proyectos de desarrollo web, como landing pages, e-commerce y apps mobile.",
+    technologies: ["Next.js", "TypeScript", "Node.js", "GraphQL"],
+  },
+  {
+    image: "/konabos logo.png",
     company: "Konabos",
-    period: "2023 - Presente",
+    period: "Ene 2021 - Dic 2022",
     role: "Tech Lead & Full-Stack Developer",
     description:
       "Lideré equipo de 5 desarrolladores en plataforma multisitio. Responsable de arquitectura, mentorías y comunicación con clientes.",
-    technologies: ["Next.js", "TypeScript", "Node.js", "GraphQL", "AWS"],
+    technologies: ["Next.js", "TypeScript", "Node.js", "GraphQL", "Auth0"],
   },
   {
+    image: "/frelo logo.png",
     company: "Frelo.dev",
-    period: "2022 - 2023",
-    role: "Full-Stack Developer Senior",
+    period: "Ene 2023 - Feb 2024",
+    role: "Founder & Full-Stack Developer Senior",
     description:
       "Desarrollo de soluciones e-commerce para turismo, integrando sistemas de pago y APIs. Optimización de rendimiento y UX.",
-    technologies: ["React", "Node.js", "PostgreSQL", "Stripe", "Docker"],
+    technologies: ["React", "Node.js", "Stripe", "Strapi", "Tailwind CSS"],
   },
   {
+    image: "/upgrow logo.png",
     company: "UpGrow",
-    period: "2021 - 2022",
-    role: "Marketing & Development Consultant",
+    period: "Ago 2023 - Actualidad",
+    role: "Founder & Marketing Consultant",
     description:
-      "Consultoría técnica en estrategias de crecimiento digital. +100k visitas/mes y +11k€ en ventas mediante embudos automatizados.",
-    technologies: ["WordPress", "Meta Ads", "Google Analytics", "Zapier"],
+      "Consultoría técnica en estrategias de crecimiento digital. Logramos para clientes +100k visitas/mes y +11k€ en ventas mediante embudos automatizados.",
+    technologies: ["Marketing Digital", "Meta Ads", "Embudos de venta"],
   },
 ];
 
@@ -59,6 +71,13 @@ export function Experience() {
               }`}
             >
               <div className="flex flex-col sm:flex-row gap-4">
+                <div className="w-32 mr-8">
+                  <img
+                    src={exp.image}
+                    alt={exp.company}
+                    className="rounded-lg"
+                  />
+                </div>
                 <div className="sm:w-1/3">
                   <div className="flex items-center gap-2 text-primary mb-1">
                     <Building2 className="w-4 h-4" />

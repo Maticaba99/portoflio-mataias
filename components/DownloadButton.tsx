@@ -5,19 +5,21 @@ import { Download, Check, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export function DownloadButton() {
-  const [downloadState, setDownloadState] = useState<"idle" | "loading" | "success">("idle");
+  const [downloadState, setDownloadState] = useState<
+    "idle" | "loading" | "success"
+  >("idle");
 
   const handleDownload = async () => {
     try {
       setDownloadState("loading");
-      
+
       // Simular la descarga (reemplazar con la lógica real de descarga)
-      await new Promise(resolve => setTimeout(resolve, 1500));
-      
+      await new Promise((resolve) => setTimeout(resolve, 1500));
+
       // Iniciar la descarga
       const link = document.createElement("a");
-      link.href = "/cv-matias-caballero.pdf"; // Asegúrate de que este archivo exista
-      link.download = "CV-Matias-Caballero.pdf";
+      link.href = "/Mati Caballero Resume.pdf";
+      link.download = "Mati Caballero Resume.pdf";
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
@@ -35,7 +37,7 @@ export function DownloadButton() {
       <Button
         onClick={handleDownload}
         disabled={downloadState === "loading"}
-        size="md"
+        size="default"
         className={`
           group
           relative
