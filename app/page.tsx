@@ -5,9 +5,11 @@ import { Header } from '@/components/Header';
 import { Hero } from '@/components/Hero';
 import { Portfolio } from '@/components/Portfolio';
 import { Technologies } from '@/components/Technologies';
+import { Experience } from '@/components/Experience';
 import { Contact } from '@/components/Contact';
 import { FAQ } from '@/components/FAQ';
 import { Footer } from '@/components/Footer';
+import { DownloadButton } from '@/components/DownloadButton';
 
 export default function Home() {
   const [isDarkMode, setIsDarkMode] = useState(true);
@@ -19,9 +21,11 @@ export default function Home() {
         <Hero />
         <Portfolio />
         <Technologies />
+        <Experience />
         <Contact />
         <FAQ />
         <Footer />
+        <DownloadButton />
       </div>
     </div>
   );

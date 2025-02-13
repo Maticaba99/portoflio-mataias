@@ -24,8 +24,6 @@ const projects = [
       "Liderazgo",
       "Scrum",
     ],
-    demoUrl: "https://demo.example.com",
-    githubUrl: "https://github.com/example/project",
     features: [
       "Responsive Design",
       "API Integration",
@@ -47,8 +45,6 @@ const projects = [
       "Liderazgo",
       "Scrum",
     ],
-    demoUrl: "https://demo.example.com",
-    githubUrl: "https://github.com/example/project",
     features: [
       "Responsive Design",
       "API Integration",
@@ -63,8 +59,6 @@ const projects = [
       "Impulsé una cuenta de repuestos de autos en Uruguay desde 0 hasta 100k visitas/mes, y ayudé a un consultor financiero español a generar 11k€ en 31 días mediante embudos de ventas y Meta Ads.",
     image: "upgrow service.png",
     tech: ["Marketing Digital", "Embudos de venta", "Meta Ads", "Consultoría"],
-    demoUrl: "https://demo.example.com",
-    githubUrl: "https://github.com/example/project",
     features: [
       "Empaquetar ofertas",
       "Estrategias de Ventas Online",
@@ -80,19 +74,16 @@ export function Portfolio() {
   });
 
   return (
-    <section id="portfolio" className="py-16 px-4">
-      <div className="max-w-7xl mx-auto space-y-12">
+    <section id="portfolio" className="section-spacing container-padding">
+      <div className="max-w-7xl mx-auto space-y-8 sm:space-y-12">
         <div className="text-center space-y-4">
-          <h2 className="text-4xl font-bold reveal">Proyectos Destacados</h2>
+          <h2 className="reveal">Proyectos Destacados</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto reveal delay-1">
             Proyectos donde mi contribución técnica y liderazgo marcaron la
             diferencia
           </p>
         </div>
-        <div
-          ref={ref}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-        >
+        <div ref={ref} className="responsive-grid">
           {projects.map((project, index) => (
             <Dialog key={index}>
               <DialogTrigger asChild>
@@ -106,9 +97,9 @@ export function Portfolio() {
                     alt={project.title}
                     className="w-full h-48 object-cover transition-transform duration-500 hover:scale-105"
                   />
-                  <div className="p-6 space-y-4">
-                    <h3 className="text-xl font-semibold">{project.title}</h3>
-                    <p className="text-muted-foreground">
+                  <div className="p-4 sm:p-6 space-y-4">
+                    <h3 className="text-lg font-semibold">{project.title}</h3>
+                    <p className="text-muted-foreground text-base">
                       {project.description}
                     </p>
                     <div className="flex flex-wrap gap-2">
@@ -124,7 +115,7 @@ export function Portfolio() {
                   </div>
                 </Card>
               </DialogTrigger>
-              <DialogContent className="glass-card border-none max-w-3xl">
+              <DialogContent className="glass-card border-none max-w-[90vw] sm:max-w-3xl">
                 <DialogHeader>
                   <DialogTitle>{project.title}</DialogTitle>
                 </DialogHeader>
@@ -147,27 +138,6 @@ export function Portfolio() {
                       ))}
                     </ul>
                   </div>
-                  {/*  <div className="flex space-x-4"> */}
-                  {/* <Button asChild className="button-glow">
-                      <a
-                        href={project.demoUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        Live Demo
-                      </a>
-                    </Button> */}
-                  {/* <Button variant="outline" asChild className="button-glow">
-                      <a
-                        href={project.githubUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <Github className="mr-2 h-4 w-4" />
-                        View Code
-                      </a>
-                    </Button> */}
-                  {/* </div> */}
                 </div>
               </DialogContent>
             </Dialog>
