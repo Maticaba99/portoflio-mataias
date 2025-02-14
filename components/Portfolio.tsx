@@ -33,7 +33,7 @@ const projects = [
     ],
   },
   {
-    title: "E-Commerce para Empresa de Turismo (Frelo.dev)",
+    title: "E-Commerce de Turismo (Frelo.dev)",
     description:
       "Desarrollé una plataforma de venta de paquetes turísticos para un cliente, integrando pasarelas de pago, gestión de inventario y todo el contenido desde un panel de Admin",
     image: "ecommerce.png",
@@ -54,7 +54,7 @@ const projects = [
     ],
   },
   {
-    title: "Estrategia de Crecimiento para E-Commerce (UpGrow)",
+    title: "Estrategia de Crecimiento (UpGrow)",
     description:
       "Impulsé una cuenta de repuestos de autos en Uruguay desde 0 hasta 100k visitas/mes, y ayudé a un consultor financiero español a generar 11k€ en 31 días mediante embudos de ventas",
     image: "upgrow service.png",
@@ -98,15 +98,15 @@ export function Portfolio() {
                     className="w-full h-48 object-cover transition-transform duration-500 hover:scale-105"
                   />
                   <div className="p-4 sm:p-6 space-y-4">
-                    <h3 className="text-lg font-semibold">{project.title}</h3>
-                    <p className="text-muted-foreground text-base">
+                    <h3 className="text-base font-semibold">{project.title}</h3>
+                    <p className="text-muted-foreground text-sm">
                       {project.description}
                     </p>
                     <div className="flex flex-wrap gap-2">
                       {project.tech.map((tech, i) => (
                         <span
                           key={i}
-                          className="glass px-3 py-1 rounded-full text-sm hover:bg-primary/10 transition-colors"
+                          className="glass px-3 py-1 rounded-full text-xs hover:bg-primary/10 transition-colors"
                         >
                           {tech}
                         </span>
@@ -117,22 +117,26 @@ export function Portfolio() {
               </DialogTrigger>
               <DialogContent className="glass-card border-none max-w-[90vw] sm:max-w-3xl">
                 <DialogHeader>
-                  <DialogTitle>{project.title}</DialogTitle>
+                  <DialogTitle className="text-base text-white">
+                    {project.title}
+                  </DialogTitle>
                 </DialogHeader>
                 <div className="space-y-4">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full rounded-lg transition-transform duration-500 hover:scale-105"
-                  />
-                  <p className="text-white">{project.description}</p>
+                  <div className="flex justify-center items-center">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-5/6 rounded-lg transition-transform duration-500 hover:scale-105"
+                    />
+                  </div>
+                  <p className="text-white text-base">{project.description}</p>
                   <div className="space-y-2">
-                    <h4 className="font-semibold text-white">
+                    <h4 className="font-semibold text-base text-white">
                       Características Principales
                     </h4>
                     <ul className="list-disc list-inside space-y-1 text-white">
                       {project.features.map((feature, i) => (
-                        <li key={i} className="reveal delay-1">
+                        <li key={i} className="reveal text-sm delay-1">
                           {feature}
                         </li>
                       ))}
