@@ -37,19 +37,19 @@ export function Technologies() {
         </div>
         <div
           ref={ref}
-          className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-6 lg:gap-8"
+          className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 sm:gap-4 md:gap-6"
         >
           {technologies.map((tech, index) => (
             <Card
               key={index}
-              className={`hover-card glass-card p-4 sm:p-6 text-center ${
+              className={`hover-card glass-card p-3 sm:p-4 md:p-6 text-center ${
                 inView ? `reveal delay-${(index % 3) + 1}` : "opacity-0"
               }`}
             >
-              <div className="text-2xl sm:text-3xl mb-3 sm:mb-4 animate-float">
+              <div className="text-xl sm:text-2xl md:text-3xl mb-2 sm:mb-3 md:mb-4 animate-float">
                 {tech.icon}
               </div>
-              <h3 className="font-semibold text-sm sm:text-base">
+              <h3 className="font-medium text-xs sm:text-sm md:text-base">
                 {tech.name}
               </h3>
             </Card>

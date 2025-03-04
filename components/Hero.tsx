@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 
 export function Hero() {
   return (
-    <section className="pt-24 sm:pt-28 md:pt-32 pb-16 sm:pb-20 md:pb-24 px-4 relative overflow-hidden container-padding section-spacing">
+    <section className="!pt-24 !sm:pt-32 !md:pt-36 pb-16 sm:pb-20 md:pb-24 px-4 relative overflow-hidden container-padding section-spacing">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
         <div className="space-y-4 sm:space-y-6 text-center lg:text-left">
           <h1 className="leading-tight">
